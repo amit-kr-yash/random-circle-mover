@@ -1,14 +1,17 @@
-const button = document.getElementById("moveBtn");
-const circle = document.getElementById("circle");
+const button=document.querySelector("#moveBtn");
+const circle=document.querySelector("#circle");
 
-    button.addEventListener("click", () => {
-      const circleDiameter = 100;
-      const maxX = window.innerWidth - circleDiameter;
-      const maxY = window.innerHeight - circleDiameter;
+ button.addEventListener("click",()=>{
 
-      const randomX = Math.random() * maxX;
-      const randomY = Math.random() * maxY;
+  const diameter=100;
 
-      circle.style.left = `${randomX}px`;
-      circle.style.top = `${randomY}px`;
-    });
+  const x=window.innerWidth-diameter;
+  const y=window.innerHeight-diameter;
+
+  const randx=Math.random()*x;
+  const randy=Math.random()*y;
+
+  circle.style.left = `${randx}px`;
+  circle.style.top = `${randy}px`;
+
+ });
